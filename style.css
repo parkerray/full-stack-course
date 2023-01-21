@@ -1,0 +1,66 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #fff;
+  background-color: #1e1e1e;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+a {
+  color: #3dff54
+}
+
+button {
+  border: none;
+  border-radius: 0;
+  background-color: #3dff54;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #30cb42;
+}
+
+input {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  color: #1e1e1e;
+  padding: 5px;
+}
+
+input:active {
+  outline: 1px solid #3dff54;
+}
+
+input:focus {
+  outline: 1px solid #3dff54;
+}
+
+.section {
+  padding: 75px 0px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 800px;
+}
+
+/* Remove number input arrows */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
