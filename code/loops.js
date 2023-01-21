@@ -22,16 +22,16 @@ const handleClick = () => {
 const forLoop = (x) => {
   if (x == '1') {
     const statusLine = document.createElement('p')
-    statusLine.innerHTML = `will loop ${x} time`;
+    statusLine.innerHTML = `looping ${x} time:`;
     resultsDiv.appendChild(statusLine);
   } else {
     const statusLine = document.createElement('p')
-    statusLine.innerHTML = `will loop ${x} times`;
+    statusLine.innerHTML = `looping ${x} times:`;
     resultsDiv.appendChild(statusLine);
   }
   for (let i = 1; i <= x; i++) {
     const statusLine = document.createElement('p')
-    statusLine.innerHTML = `loop ${i}`;
+    statusLine.innerHTML = `> loop ${i} done`;
     resultsDiv.appendChild(statusLine);
   }
 }
