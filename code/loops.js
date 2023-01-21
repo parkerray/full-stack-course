@@ -1,12 +1,21 @@
 const button = document.querySelector("#run");
+const statusDiv = document.querySelector("#status");
 
 const handleClick = () => {
+  statusDiv.innerHTML = "";
   console.log(`you clicked a button`);
-  let count = document.querySelector("#count").value;
+  const input = document.querySelector("#count");
+  const count = input.value;
   if (count < 1 || count > 1000) {
-    console.log(`please use a number between 1 and 1,000`)
+    const errorMessage = `please use a number between 1 and 1,000`;
+    console.log(errorMessage);
+    const error = document.createElement('p');
+    error.setAttribute('class', 'error');
+    error.innerHTML = errorMessage;
+    statusDiv.appendChild(error)
   } else {
     forLoop(count);
+    input.value = "";
   }
 }
 
@@ -22,3 +31,8 @@ const forLoop = (x) => {
 }
 
 button.addEventListener("click", handleClick);
+document.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    handleClick();
+  }
+});

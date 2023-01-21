@@ -55,6 +55,11 @@ input:focus {
   max-width: 800px;
 }
 
+.error {
+  color: #ff3d3d;
+  font-style: italic;
+}
+
 /* Remove number input arrows */
 
 /* Chrome, Safari, Edge, Opera */
