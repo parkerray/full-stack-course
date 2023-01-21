@@ -9,7 +9,6 @@ const handleClick = () => {
   const count = input.value;
   if (count < 1 || count > 1000) {
     const errorMessage = `please use a number between 1 and 1,000`;
-    console.log(errorMessage);
     const error = document.createElement('p');
     error.setAttribute('class', 'error');
     error.innerHTML = errorMessage;
@@ -21,7 +20,7 @@ const handleClick = () => {
 }
 
 const forLoop = (x) => {
-  if (x === 1) {
+  if (x == '1') {
     const statusLine = document.createElement('p')
     statusLine.innerHTML = `will loop ${x} time`;
     resultsDiv.appendChild(statusLine);
