@@ -1,9 +1,10 @@
 const button = document.querySelector("#run");
 const statusDiv = document.querySelector("#status");
+const resultsDiv = document.querySelector("#results");
 
 const handleClick = () => {
   statusDiv.innerHTML = "";
-  console.log(`you clicked a button`);
+  resultsDiv.innerHTML = "";
   const input = document.querySelector("#count");
   const count = input.value;
   if (count < 1 || count > 1000) {
@@ -21,12 +22,18 @@ const handleClick = () => {
 
 const forLoop = (x) => {
   if (x === 1) {
-    console.log(`will loop ${x} time`)
+    const statusLine = document.createElement('p')
+    statusLine.innerHTML = `will loop ${x} time`;
+    resultsDiv.appendChild(statusLine);
   } else {
-    console.log(`will loop ${x} times`)
+    const statusLine = document.createElement('p')
+    statusLine.innerHTML = `will loop ${x} times`;
+    resultsDiv.appendChild(statusLine);
   }
   for (let i = 1; i <= x; i++) {
-    console.log(`loop #${i}`)
+    const statusLine = document.createElement('p')
+    statusLine.innerHTML = `loop ${i}`;
+    resultsDiv.appendChild(statusLine);
   }
 }
 
