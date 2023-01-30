@@ -61,6 +61,11 @@ input:focus {
   font-style: italic;
 }
 
+.svg {
+  margin-top: 32px;
+  width: 400px;
+}
+
 /* Remove number input arrows */
 
 /* Chrome, Safari, Edge, Opera */
